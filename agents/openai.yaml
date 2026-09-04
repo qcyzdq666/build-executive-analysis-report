@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 管理层业务复盘报告"
+  short_description: "将已完成的业务分析结论转成可核查、可分享的管理层 HTML 报告"
+  default_prompt: "使用 $build-executive-analysis-report，把我提供的业务背景、分析结论、聚合数据和口径整理成一份结论先行的管理层复盘 HTML，并完成证据、语言和页面校验。"
