@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <title>{{REPORT_TITLE}}</title>
+  <style>
+    :root{--blue:#2859a5;--blue-light:#4a7fd4;--blue-bg:#e8f0fe;--up:#d64545;--down:#2e8b57;--warning:#d97706;--bg:#f5f7fa;--card:#fff;--border:#d0d7e3;--text:#333;--text-m:#666;--text-l:#999;--highlight:#fffde7;--hover:#f0f4ff;--fill-1:#c9d9ee;--fill-2:#9adcc2;--fill-3:#f5cf9a;--fill-4:#edb6be;--line-1:#8ba8c8;--line-2:#6bc4a0;--line-3:#d4a458;--line-4:#cc8490;--shadow:0 8px 28px rgba(40,89,165,.1);--radius:16px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.68}.page{max-width:1180px;margin:auto;padding:24px 24px 64px}.hero{padding:48px 52px 40px;border-radius:24px;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-light));box-shadow:var(--shadow)}.eyebrow{font-size:13px;letter-spacing:.12em;color:rgba(255,255,255,.78)}.hero h1{margin:9px 0 11px;font-size:39px;line-height:1.28}.hero .thesis{max-width:900px;margin:0;font-size:17px;color:rgba(255,255,255,.9)}.disclosure{margin-top:20px;padding:10px 13px;border-radius:10px;background:rgba(255,255,255,.1);font-size:13px}.nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.nav a{padding:7px 11px;border-radius:8px;background:rgba(255,255,255,.09);color:#fff;text-decoration:none;font-size:13px}section{margin-top:28px;scroll-margin-top:18px}.section-head{display:flex;align-items:baseline;gap:11px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--blue)}.index{color:var(--blue);font-weight:800;font-size:13px}h2{margin:0;font-size:25px;line-height:1.36}h3{margin:0 0 8px;font-size:17px}p{margin:0 0 10px}.lead{max-width:960px;color:var(--text-m)}.grid{display:grid;gap:14px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{padding:21px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);box-shadow:0 3px 15px rgba(40,89,165,.05)}.kpi{min-height:184px}.tag{display:inline-block;padding:4px 8px;border-radius:6px;background:var(--blue-bg);color:var(--blue);font-size:12px;font-weight:800}.kpi strong{display:block;margin:12px 0 8px;font-size:23px;line-height:1.35}.kpi p,.small{color:var(--text-m);font-size:13px}.metric-up{color:var(--up);font-weight:700}.metric-down{color:var(--down);font-weight:700}.recommendation{padding:19px 22px;border-left:4px solid var(--blue);border-radius:0 13px 13px 0;background:var(--blue-bg)}.recommendation ul,.action ul{margin:8px 0 0;padding-left:20px}.logic{display:grid;gap:8px}.logic-row{display:grid;grid-template-columns:96px 1fr;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}.logic-row:last-child{border:0}.logic-row b{color:var(--blue);font-size:13px}.logic-row span{color:var(--text-m);font-size:14px}.chart{min-height:260px;padding:20px;overflow:auto;border:1px solid var(--border);border-radius:var(--radius);background:#fafbfd}.chart-placeholder{display:grid;place-items:center;min-height:220px;border:1px dashed var(--border);border-radius:12px;color:var(--text-m);text-align:center}.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.action{padding:19px;border:1px solid var(--border);border-radius:14px;background:var(--card)}.owner{display:inline-block;margin-bottom:9px;padding:4px 8px;border-radius:6px;background:#f0fdf4;color:var(--down);font-size:12px;font-weight:800}.note{padding:13px 15px;border-radius:10px;background:#fefce8;color:#92400e;font-size:13px}details{margin-top:14px;border:1px solid var(--border);border-radius:13px;background:var(--card);overflow:hidden}summary{cursor:pointer;padding:16px 19px;background:#fafbfd;color:var(--blue);font-weight:800}.detail{padding:19px}.table-scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12.5px}th,td{padding:11px 10px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}th{background:var(--blue);color:#fff;font-weight:500}tr.latest td{background:var(--highlight)}tbody tr:hover td{background:var(--hover)}.footer{margin-top:26px;padding:17px 20px;border:1px dashed var(--border);border-radius:12px;background:rgba(255,255,255,.7);color:var(--text-m);font-size:12px}
+    @media(max-width:900px){.grid-4,.grid-3,.grid-2,.actions{grid-template-columns:1fr 1fr}.hero{padding:38px 34px}.hero h1{font-size:32px}}
+    @media(max-width:600px){.page{padding:12px 10px 40px}.hero{padding:30px 22px;border-radius:18px}.hero h1{font-size:28px}.grid-4,.grid-3,.grid-2,.actions{grid-template-columns:1fr}.nav{display:none}.logic-row{grid-template-columns:74px 1fr}.card{padding:17px}}
+    @media print{body{background:#fff}.page{max-width:none;padding:0}.hero,.card{box-shadow:none}.nav{display:none}section{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <div class="eyebrow">{{EYEBROW}}</div>
+    <h1>{{REPORT_TITLE}}</h1>
+    <p class="thesis">{{CORE_THESIS}}</p>
+    <div class="disclosure">{{SCOPE_AND_DISCLOSURE}}</div>
+    <nav class="nav" aria-label="报告目录">
+      <a href="#summary">核心结论</a><a href="#problem">业务问题</a><a href="#evidence">关键证据</a><a href="#actions">行动建议</a><a href="#limits">边界</a>
+    </nav>
+  </header>
+
+  <!-- REPORT:SUMMARY_START -->
+  <section id="summary">
+    <div class="section-head"><span class="index">01</span><h2>{{SUMMARY_HEADING}}</h2></div>
+    <div class="grid grid-4">
+      <article class="card kpi"><span class="tag">{{KPI_1_TAG}}</span><strong>{{KPI_1_VALUE}}</strong><p>{{KPI_1_INTERPRETATION}}</p><p class="small">{{KPI_1_SCOPE}}</p></article>
+      <article class="card kpi"><span class="tag">{{KPI_2_TAG}}</span><strong>{{KPI_2_VALUE}}</strong><p>{{KPI_2_INTERPRETATION}}</p><p class="small">{{KPI_2_SCOPE}}</p></article>
+      <article class="card kpi"><span class="tag">{{KPI_3_TAG}}</span><strong>{{KPI_3_VALUE}}</strong><p>{{KPI_3_INTERPRETATION}}</p><p class="small">{{KPI_3_SCOPE}}</p></article>
+      <article class="card kpi"><span class="tag">{{KPI_4_TAG}}</span><strong>{{KPI_4_VALUE}}</strong><p>{{KPI_4_INTERPRETATION}}</p><p class="small">{{KPI_4_SCOPE}}</p></article>
+    </div>
+    <div class="recommendation" style="margin-top:14px"><strong>{{DECISION_HEADING}}</strong>{{DECISION_CONTENT}}</div>
+  </section>
+  <!-- REPORT:SUMMARY_END -->
+
+  <!-- REPORT:PROBLEM_START -->
+  <section id="problem">
+    <div class="section-head"><span class="index">02</span><h2>{{PROBLEM_HEADING}}</h2></div>
+    <div class="grid grid-2">
+      <article class="card"><h3>{{SURFACE_SIGNAL_TITLE}}</h3><p>{{SURFACE_SIGNAL}}</p></article>
+      <article class="card logic">
+        <div class="logic-row"><b>WHY</b><span>{{WHY}}</span></div>
+        <div class="logic-row"><b>SO WHAT</b><span>{{SO_WHAT}}</span></div>
+        <div class="logic-row"><b>NOW WHAT</b><span>{{NOW_WHAT}}</span></div>
+      </article>
+    </div>
+  </section>
+  <!-- REPORT:PROBLEM_END -->
+
+  <!-- REPORT:EVIDENCE_START -->
+  <section id="evidence">
+    <div class="section-head"><span class="index">03</span><h2>{{EVIDENCE_HEADING}}</h2></div>
+    <p class="lead">{{EVIDENCE_INTRO}}</p>
+    <div class="chart" role="group" aria-label="{{CHART_ARIA_LABEL}}">{{DECISION_USEFUL_CHART_OR_TABLE}}</div>
+    <div class="note" style="margin-top:14px"><strong>核心判断：</strong>{{EVIDENCE_CONCLUSION}}</div>
+    <details><summary>查看口径、方法和明细</summary><div class="detail">{{METHOD_AND_DETAILS}}</div></details>
+  </section>
+  <!-- REPORT:EVIDENCE_END -->
+
+  <!-- REPORT:ACTIONS_START -->
+  <section id="actions">
+    <div class="section-head"><span class="index">04</span><h2>{{ACTIONS_HEADING}}</h2></div>
+    <div class="actions">{{OWNER_ACTION_CARDS}}</div>
+  </section>
+  <!-- REPORT:ACTIONS_END -->
+
+  <!-- REPORT:LIMITS_START -->
+  <section id="limits">
+    <div class="section-head"><span class="index">05</span><h2>{{LIMITS_HEADING}}</h2></div>
+    <div class="grid grid-2">{{LIMITATION_AND_FOLLOWUP_CARDS}}</div>
+  </section>
+  <!-- REPORT:LIMITS_END -->
+
+  <footer class="footer">{{DATA_METHOD_AND_CONFIDENTIALITY_FOOTER}}</footer>
+</main>
+</body>
+</html>
